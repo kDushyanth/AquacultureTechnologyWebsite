@@ -1,0 +1,122 @@
+header{
+  text-align: center;
+  width: 100%;
+}
+body{
+  margin:0px;
+    background-color: #A8A796;
+}
+.smscrntxt{
+  display:none;
+}
+.head{
+   display: flex;
+   align-items: center;
+   color:white;
+   background-color: #0F17BA;
+}
+img{
+  margin-right:4px;
+  position: relative;
+  top:2px;
+  left:2px;
+}
+img:hover{
+  border:5px solid yellow;
+  cursor:pointer;
+
+}
+@media only screen and (max-width: 1000px) {
+    .lgscrntxt{
+      display:none;
+    }
+    .smscrntxt{
+      display:block;
+    }
+    .head{
+      display:block;
+      justify-content: center;
+    }
+}
+
+.contacts{
+  display:flex;
+  justify-content: space-around;
+}
+.sems{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  margin:10px;
+}
+.topics{
+display:none;
+overflow: hidden;
+}
+.sems div h1,h2{
+text-align: center;
+font-weight: normal;
+}
+.sems div{
+  border:2px solid green;
+  padding :10px;
+  border-radius: 10px;
+  background-color: white;
+}
+button{
+  border:none;
+  background-color: white;
+  text-align: left;
+  outline:none !important;
+}
+button:hover,button:active{
+  color:white;
+  background-color: black;
+  border-radius: 3px;
+  padding:5px;
+  border:2px solid orange;
+  width: 100%;
+  cursor:pointer;
+}
+li:not(:last-child) {
+    margin-bottom: 5px;
+}
+ul{
+  list-style: none;
+}
+#scrollUp{
+  border:1px solid;
+  padding:3px;
+  color:#42BED0;
+  border-radius: 10px;
+  background-color: #A0710B;
+  font-size: 1.5rem;
+  position:fixed;
+  right: 20px;
+  bottom: 20px;
+  outline:none !important;
+}
+#scrollUp:hover{
+   width: auto;
+   border:1px solid;
+   padding:10px;
+   color:#42BED0;
+   background-color: #A0710B;
+   font-size: 1.5rem;
+   box-shadow: 10px 10px 5px #ccc;
+   -moz-box-shadow: 10px 10px 5px #ccc;
+   -webkit-box-shadow: 10px 10px 5px #ccc;
+   -khtml-box-shadow: 10px 10px 5px #ccc;
+}
+#contactheading{
+  color:red;
+  padding:10px;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: #9400d3;
+  margin-top: 10px;
+}
+li ul{
+  position:relative;
+  left:-43px;
+}
