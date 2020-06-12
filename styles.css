@@ -2,29 +2,37 @@ header{
   text-align: center;
   width: 100%;
 }
+html{
+  scroll-behavior: smooth;
+}
 body{
   margin:0px;
-    background-color: #A8A796;
+    background-color:#CDCDCD;
 }
 .smscrntxt{
   display:none;
 }
-.head{
-   display: flex;
-   align-items: center;
-   color:white;
-   background-color: #0F17BA;
-}
-img{
-  margin-right:4px;
-  position: relative;
-  top:2px;
-  left:2px;
-}
-img:hover{
-  border:5px solid yellow;
+.logo:hover{
   cursor:pointer;
-
+  box-shadow: 1px 1px 5px 10px  yellow;
+}
+.smscrntxt{
+  display: none;
+}
+.logo{
+  border-radius : 30%;
+  margin-right: 30px;
+  border: 5px solid #00FFFF;
+  margin-left: 10px;
+}
+.head{
+background-color: #00154F;
+position: relative;
+color:#F4AF1B;
+font-family: sans-serif;
+display: flex;
+align-items: center;
+width: 100%;
 }
 @media only screen and (max-width: 1000px) {
     .lgscrntxt{
@@ -34,14 +42,16 @@ img:hover{
       display:block;
     }
     .head{
-      display:block;
-      justify-content: center;
+      display: block;
+    }
+    .contactbutton{
+      display: none;
     }
 }
-
-.contacts{
-  display:flex;
-  justify-content: space-around;
+@media only screen and (max-width: 600px) {
+  .head div h1{
+    font-size: 2rem;
+  }
 }
 .sems{
   display: grid;
@@ -58,7 +68,7 @@ text-align: center;
 font-weight: normal;
 }
 .sems div{
-  border:2px solid green;
+  border:3px solid green;
   padding :10px;
   border-radius: 10px;
   background-color: white;
@@ -85,11 +95,11 @@ ul{
   list-style: none;
 }
 #scrollUp{
-  border:1px solid;
+  border:2px solid blue;
   padding:3px;
-  color:#42BED0;
+  color:yellow;
   border-radius: 10px;
-  background-color: #A0710B;
+  background-color: red;
   font-size: 1.5rem;
   position:fixed;
   right: 20px;
@@ -100,23 +110,64 @@ ul{
    width: auto;
    border:1px solid;
    padding:10px;
-   color:#42BED0;
-   background-color: #A0710B;
+   color:red;
+   border:2px solid blue;
+   background-color:yellow;
    font-size: 1.5rem;
-   box-shadow: 10px 10px 5px #ccc;
-   -moz-box-shadow: 10px 10px 5px #ccc;
-   -webkit-box-shadow: 10px 10px 5px #ccc;
-   -khtml-box-shadow: 10px 10px 5px #ccc;
 }
-#contactheading{
+#contactheading span{
   color:red;
   padding:10px;
-  text-align: center;
-  text-decoration: underline;
-  text-decoration-color: #9400d3;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #9400d3;
+  border-right: 2px solid #9400d3;
   margin-top: 10px;
 }
 li ul{
   position:relative;
   left:-43px;
+}
+li ul li{
+  border:1px solid black;
+  padding:5px;
+  border-radius: 5px;
+}
+.contacts{
+  background-color: black;
+  padding:3rem;
+  padding-top: 0.5rem;
+}
+.contacts div{
+  color:white;
+  display:flex;
+  flex-wrap:wrap;
+  text-align: center;
+  justify-content: center;
+  justify-content: space-around;
+}
+.contactbutton{
+  border-radius: 50%;
+  padding:10px;
+ position: absolute;
+ right: 0;
+ bottom: 0;
+ margin: 10px;
+}
+.contactbutton:hover{
+  background-color: black;
+  width: auto;
+  border-radius: 50%;
+  padding:10px;
+  border:2px solid  #98FB98;
+  color:white;
+}
+.carousel-caption h5 {
+    color: yellow;
+    font-weight:lighter;
+    font-family: sans-serif;
+    font-size: 1.5em;
+}
+.carousel-item img{
+  border:5px solid white;
+  margin-top: 5px;
 }

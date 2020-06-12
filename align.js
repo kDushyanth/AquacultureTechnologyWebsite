@@ -21,3 +21,8 @@ scroller.addEventListener("click",function () {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 });
+var contact = document.getElementsByClassName("contactbutton");
+contact[0].addEventListener("click",function () {
+  var scrollingElement = (document.scrollingElement || document.body);
+scrollingElement.scrollTop = scrollingElement.scrollHeight;
+});
