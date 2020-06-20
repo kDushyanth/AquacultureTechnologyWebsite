@@ -7,7 +7,8 @@ html{
 }
 body{
   margin:0px;
-    background-color:#CDCDCD;
+  background-color:#CDCDCD;
+  font-family: sans-serif;
 }
 .smscrntxt{
   display:none;
@@ -47,6 +48,9 @@ width: 100%;
     .contactbutton{
       display: none;
     }
+    .logo{
+      margin: 10px;
+    }
 }
 @media only screen and (max-width: 600px) {
   .head div h1{
@@ -55,7 +59,7 @@ width: 100%;
 }
 .sems{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
   grid-gap: 1rem;
   margin:10px;
 }
@@ -63,57 +67,71 @@ width: 100%;
 display:none;
 overflow: hidden;
 }
-.sems div h1,h2{
+.sems div h3,h4{
 text-align: center;
 font-weight: normal;
+color:magenta;
 }
+h4{
+color: springgreen;
+}
+
 .sems div{
-  border:3px solid green;
-  padding :10px;
+  border:3px solid white;
+  padding :15px;
   border-radius: 10px;
-  background-color: white;
-}
-button{
-  border:none;
-  background-color: white;
-  text-align: left;
-  outline:none !important;
-}
-button:hover,button:active{
-  color:white;
   background-color: black;
+  height:400px;
+  overflow: auto;
+}
+.units{
+  border:none;
+  text-align: left;
+  list-style: none;
+  position:relative;
+  left:-15px;
+  color:yellow;
+}
+p{
+  margin-bottom: 10px;
+}
+p:hover{
+  color:white;
   border-radius: 3px;
-  padding:5px;
-  border:2px solid orange;
-  width: 100%;
+  font-size: 1.05em;
+  font-family: sans-serif;
   cursor:pointer;
 }
 li:not(:last-child) {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
-ul{
+.topics li{
+  padding:5px;
+  color:cyan;
   list-style: none;
+  position:relative;
+  left:-20px;
+  border:1px solid orange;
+}
+.topics:hover{
+  cursor: pointer;
 }
 #scrollUp{
-  border:2px solid blue;
-  padding:3px;
-  color:yellow;
-  border-radius: 10px;
-  background-color: red;
-  font-size: 1.5rem;
+  border-radius: 50%;
+  position:float;
+  border: 3px solid white;
   position:fixed;
   right: 20px;
   bottom: 20px;
+  padding: 0px;
+  z-index: 1;
   outline:none !important;
 }
-#scrollUp:hover{
-   width: auto;
-   border:1px solid;
-   padding:10px;
-   color:red;
-   border:2px solid blue;
-   background-color:yellow;
-   font-size: 1.5rem;
+#scrollUp span img{
+  height:40px;
+}
+hr:not(.incontact){
+  border: 1px solid white;
 }
 #contactheading span{
   color:red;
@@ -122,15 +140,6 @@ ul{
   border-bottom: 2px solid #9400d3;
   border-right: 2px solid #9400d3;
   margin-top: 10px;
-}
-li ul{
-  position:relative;
-  left:-43px;
-}
-li ul li{
-  border:1px solid black;
-  padding:5px;
-  border-radius: 5px;
 }
 .contacts{
   background-color: black;
@@ -145,10 +154,15 @@ li ul li{
   justify-content: center;
   justify-content: space-around;
 }
+.contacts div div ul{
+  list-style: none;
+}
 .contactbutton{
   border-radius: 50%;
+  border:2px solid black;
   padding:10px;
  position: absolute;
+ outline:0 !important;
  right: 0;
  bottom: 0;
  margin: 10px;
