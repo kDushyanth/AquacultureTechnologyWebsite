@@ -111,7 +111,7 @@ li:not(:last-child) {
   list-style: none;
   position:relative;
   left:-20px;
-  border:1px solid orange;
+  border:2px solid orange;
 }
 .topics:hover{
   cursor: pointer;
