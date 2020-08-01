@@ -1,9 +1,17 @@
 $(document).ready(function(){
+  $("p").append("<span class=\"status\">+</span>")
   $("p").click(function(){
     var curr = $(this).next();
-    if( curr.css("display")=="none")  curr.css({"display":"block"});
+    if( curr.css("display")=="none")
+     {
+       curr.css({"display":"block"});
+       $(this).css({"color":"silver"});
+       $(this).find(".status").html("-");
+     }
     else{
       curr.css({"display":"none"});
+      $(this).css({"color":"yellow"});
+      $(this).find(".status").html("+");
     }
    });
 var scroller = document.getElementById("scrollUp");

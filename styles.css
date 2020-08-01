@@ -2,38 +2,57 @@ header{
   text-align: center;
   width: 100%;
 }
-html{
-  scroll-behavior: smooth;
-}
 body{
   margin:0px;
-  background-color:#CDCDCD;
+  letter-spacing: 0.5px;
   font-family: sans-serif;
+  background-image: url(images/bg.jpg);
+  background-size: 500px 361px;
 }
 .smscrntxt{
   display:none;
 }
 .logo:hover{
   cursor:pointer;
-  box-shadow: 1px 1px 5px 10px  yellow;
 }
 .smscrntxt{
   display: none;
 }
 .logo{
   border-radius : 30%;
+  border:4px solid yellow;
   margin-right: 30px;
-  border: 5px solid #00FFFF;
   margin-left: 10px;
 }
 .head{
 background-color: #00154F;
 position: relative;
+border-bottom: 2px solid red;
+margin-bottom: 30px;
 color:#F4AF1B;
+padding-top: 10px;
 font-family: sans-serif;
 display: flex;
 align-items: center;
 width: 100%;
+}
+.sems div{
+  padding:10px 2px;
+  background-color: black;
+  height:400px;
+  margin:5px;
+  box-shadow: 0px 0px 6px 2px white;
+  overflow: auto;
+  border-radius: 5px;
+  border: 2px solid white;
+}
+@media only screen and (min-width:600px) {
+.sems {
+  display: grid;
+  grid-gap: 1rem;
+  margin:50px 100px;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+}
 }
 @media only screen and (max-width: 1000px) {
     .lgscrntxt{
@@ -51,17 +70,22 @@ width: 100%;
     .logo{
       margin: 10px;
     }
+
 }
 @media only screen and (max-width: 600px) {
   .head div h1{
     font-size: 2rem;
   }
-}
-.sems{
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
-  grid-gap: 1rem;
-  margin:10px;
+  .sems{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin:2.5px 0px;
+  }
+  .sems div{
+    transform: scale(0.95);
+    justify-content: center;
+    padding: 5px;
+  }
 }
 .topics{
 display:none;
@@ -75,15 +99,6 @@ color:magenta;
 h4{
 color: springgreen;
 }
-
-.sems div{
-  border:3px solid white;
-  padding :15px;
-  border-radius: 10px;
-  background-color: black;
-  height:400px;
-  overflow: auto;
-}
 .units{
   border:none;
   text-align: left;
@@ -93,16 +108,16 @@ color: springgreen;
   color:yellow;
 }
 p{
-  margin-bottom: 10px;
+  margin-bottom: 11px;
+  width: 95%;
+  display: flex;
+  align-items: center;
 }
 p:hover{
-  color:white;
-  border-radius: 3px;
-  font-size: 1.05em;
-  font-family: sans-serif;
-  cursor:pointer;
+  color:silver;
+  cursor: pointer;
 }
-li:not(:last-child) {
+.topics li:last-child {
     margin-bottom: 10px;
 }
 .topics li{
@@ -111,27 +126,29 @@ li:not(:last-child) {
   list-style: none;
   position:relative;
   left:-20px;
-  border:2px solid orange;
+  border:1px solid white;
 }
-.topics:hover{
+.topics li:hover{
+  color:#ef932f;
   cursor: pointer;
 }
 #scrollUp{
-  border-radius: 50%;
-  position:float;
-  border: 3px solid white;
   position:fixed;
+  background-color:white;
   right: 20px;
+  border:none;
   bottom: 20px;
-  padding: 0px;
+  border-radius:15%;
+  padding: 5px 3px;
   z-index: 1;
   outline:none !important;
 }
-#scrollUp span img{
-  height:40px;
+#scrollUp:hover{
+  background-color: orange;
+  color:white;
 }
 hr:not(.incontact){
-  border: 1px solid white;
+  border: 1.25px solid white;
 }
 #contactheading span{
   color:red;
@@ -141,9 +158,16 @@ hr:not(.incontact){
   border-right: 2px solid #9400d3;
   margin-top: 10px;
 }
+h3{
+  font-size: 1.5rem;
+}
+h4{
+  font-size:1.25rem;
+}
 .contacts{
   background-color: black;
   padding:3rem;
+  border-top: 2px solid wheat;
   padding-top: 0.5rem;
 }
 .contacts div{
@@ -158,30 +182,59 @@ hr:not(.incontact){
   list-style: none;
 }
 .contactbutton{
-  border-radius: 50%;
   border:2px solid black;
-  padding:10px;
+  padding:7px;
  position: absolute;
  outline:0 !important;
  right: 0;
- bottom: 0;
- margin: 10px;
+ bottom: -3px;
 }
 .contactbutton:hover{
   background-color: black;
   width: auto;
-  border-radius: 50%;
-  padding:10px;
+  padding:7px;
   border:2px solid  #98FB98;
   color:white;
 }
 .carousel-caption h5 {
-    color: yellow;
+    color: white;
     font-weight:lighter;
     font-family: sans-serif;
     font-size: 1.5em;
+    background-color: darkslategray;
+    width: fit-content;
+    margin-left: auto;
+    padding: 0px 5px;
+    border: 1px solid;
+    margin-right: auto;
 }
 .carousel-item img{
   border:5px solid white;
   margin-top: 5px;
+}
+.carousel-indicators li{
+  opacity:1;
+  transition: opacity 1s ease;
+}
+.carousel-indicators .active{
+  background-color: cyan;
+}
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: black;
+}
+::-webkit-scrollbar-thumb {
+  background:gray;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: silver;
+}
+.status{
+  position:absolute;
+  right:0px;
+  width:5%;
+  font-size: 1.05em;
+  color:orange;
 }
