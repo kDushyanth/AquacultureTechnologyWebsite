@@ -1,6 +1,9 @@
 const express = require('express')
 const cors = require('cors')
-
+const mongoose = require('mongoose');
+mongoose.connect('mongodb+srv://AQT_dev:aqctsvrm@act.io0on.mongodb.net/AQT_dev?retryWrites=true&w=majority',{ useNewUrlParser: true ,})
+.then(()=>console.log('connected to database succesfully'))
+.catch((err)=>console.log(err));
 const path = require('path')
 
 const app = express()
