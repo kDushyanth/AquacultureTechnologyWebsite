@@ -3,8 +3,8 @@ const router = express.Router();
 const {getTopicsAndMaterials } = require('../controllers/Controller.js');
 
 router
-    .route('/:chapter')
-    .get(getTopicsAndMaterials) // to be added 
+    .route('/:semester/:chapter')
+    .get(getTopicsAndMaterials) 
 
     
 
