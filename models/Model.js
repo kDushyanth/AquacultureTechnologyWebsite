@@ -11,7 +11,7 @@ const MaterialSchema = new Schema({
     },
     urls : {
         type: [String],
-    },
+    }
 });
 
 module.exports = mongoose.model('Materials' , MaterialSchema);
