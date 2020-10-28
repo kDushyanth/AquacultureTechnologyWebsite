@@ -5,6 +5,10 @@ const MaterialSchema = new Schema({
         type : String,
         required : true
     },
+    semester : {
+        type : String,
+        required : true
+    },
     topic : {
         type : String,
         required : [true , 'Please add correct topic name']   
