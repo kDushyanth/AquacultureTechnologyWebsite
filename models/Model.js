@@ -6,7 +6,7 @@ const MaterialSchema = new Schema({
         required : true
     },
     topic : {
-        type:String,
+        type : String,
         required : [true , 'Please add correct topic name']   
     },
     urls : {
