@@ -1,13 +1,12 @@
-const Materials = require('../models/Model');
-
+//const Materials = require('../models/Model');
+const model_info = require('./../models/Model');
 //GET request
 //route :  GET /api/v1/:semester/:chapter
 exports.getTopicsAndMaterials = async (req,res,next) => {
     var chapter = req.params.chapter;
     var semester = req.params.semester;
     try{
-        const materials = await Materials.find({name : chapter, semester : semester});
-        
+        const materials = await model_info.find({name : chapter, semester : semester});
         return res.status(200).json({
             success : true,
             data : materials
