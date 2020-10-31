@@ -3,17 +3,17 @@ $(document).ready(function () {
     $('body').click(function(event) {
         if($(event.target).is('.topic')) {
             console.log();
-            var chapter = event.target.innerHTML;
-            var name =  $(  $(  $(event.target).parent()[0]  ).parent()[0]).find("h5")[0].innerHTML ;
+            var name = event.target.innerHTML;
+            var semester =  $(  $(  $(event.target).parent()[0]  ).parent()[0]).find("h5")[0].innerHTML ;
             // console.log(name + ' is name ');
             // console.log(chapter+ ' is chapter ');
-            getMaterialsController( name, chapter);
+            getMaterialsController( semester,name);
         }
     });
 });
 
 
-const getMaterialsController = async (name, chapter) => {
-    const response = await getMaterials(name,chapter);
+const getMaterialsController = async (semester,name) => {
+    const response = await postMaterials();
     console.log(response);
 }

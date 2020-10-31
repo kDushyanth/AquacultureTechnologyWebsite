@@ -37,7 +37,6 @@ exports.pushFiles = async (req,res,next) => {
     console.log(semester);
     try{
         var result = await model_info.find({name : chapter, semester : semester, topic : topic});
-        console.log(result);
         // model_info.update(
         //     { _id: item._id }, 
         //     { $push: { name: value } },
