@@ -5,6 +5,9 @@ const model_info = require('./../models/Model');
 exports.getTopicsAndMaterials = async (req,res,next) => {
     var chapter = req.params.chapter;
     var semester = req.params.semester;
+    console.log('received get req');
+    console.log(semester + ' is name ');
+    console.log(chapter + ' is chap ');
     try{
         const materials = await model_info.find({name : chapter, semester : semester});
         return res.status(200).json({
@@ -18,8 +21,37 @@ exports.getTopicsAndMaterials = async (req,res,next) => {
             success:false,
             error : 'Server Error'
         })
-    }
-    
-    
+    }  
 }
 
+exports.pushFiles = async (req,res,next) => {
+    var chapter = req.params.chapter;
+    var semester = req.params.semester;
+    var topic = req.body.topic;
+    var paper = req.body.paper || {
+
+    }
+    console.log(req.body);
+    console.log(topic);
+    console.log(chapter);
+    console.log(semester);
+    try{
+        var result = await model_info.find({name : chapter, semester : semester, topic : topic});
+        console.log(result);
+        // model_info.update(
+        //     { _id: item._id }, 
+        //     { $push: { name: value } },
+        //     done
+        // );
+        return res.status(200).json({
+            success : true,
+            data : result
+        })
+    }
+    catch{
+        return res.status(500).json({
+            success:false,
+            error : 'Server Error'
+        })
+    }  
+}
