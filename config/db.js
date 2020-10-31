@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const model_info = require('./../models/Model.js');
+// const model_info = require('./../models/Model.js');
 const connectDB = async () => {
     try {
         const conn = await mongoose.connect(process.env.MONGO_URI , {
