@@ -371,7 +371,6 @@ var topic=["Concept of Blue Revolution - History and definition of Aquaculture "
 "-1",
 "PROJECT WORK"
 ];
-//
 var lists = $('.list-group');
 var k=0;
 /*for(var i=0;i<10;i++){
