@@ -5,9 +5,9 @@ const model_info = require('./../models/Model');
 exports.getTopicsAndMaterials = async (req,res,next) => {
     var chapter = req.params.chapter;
     var semester = req.params.semester;
-    // console.log('received get req');
-    // console.log(semester + ' is name ');
-    // console.log(chapter + ' is chap ');
+    console.log('received get req');
+    console.log(semester + ' is name ');
+    console.log(chapter + ' is chap ');
     try{
         const materials = await model_info.find({name : chapter, semester : semester});
         return res.status(200).json({
