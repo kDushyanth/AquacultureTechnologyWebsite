@@ -374,14 +374,35 @@ var topic=["Concept of Blue Revolution - History and definition of Aquaculture "
 //
 var lists = $('.list-group');
 var k=0;
-/*for(var i=0;i<10;i++){
+for(var i=0;i<10;i++){
   while(k<chapter.length && chapter[k]!=-1){
-    $(lists[i]).append(`<a href="#" class="list-group-item list-group-item-action ">${chapter[k]}</a>`);  
+    $(lists[i]).append(`<a href="#" class="list-group-item list-group-item-action topic">${chapter[k]}</a>`);  
     k++;
   }
   //i++;
   k++;
-}*/
+}
 /*for(var i=0;i<10;i++){
    $(lists[i]).html("");
 }*/
+
+// $(document).ready(function () {
+//   var parentElement = $(".ParentBox");
+//   for(i=0;i<10;i++){
+//     parentElement.append(`<div class="card border-dark mb-3" style="max-width: 22rem;">
+//                         <div class="card-header">Semester-2 Paper-2</div>
+//                         <div class="card-body text-dark">
+//                           <h5 class="card-title">BIOLOGY OF FIN FISH &amp; SHELL FISH</h5>
+//                           <p class="card-text">
+//                             </p>
+//                             <div class="list-group">
+//                               <a href="#" class="list-group-item list-group-item-action ">GENERAL CHARACTERS &amp; CLASSIFICATION OF CULTIVABLE FIN &amp; SHELL FISH</a>
+//                               <a href="#" class="list-group-item list-group-item-action ">FOOD AND FEEDING</a><a href="#" class="list-group-item list-group-item-action ">DIGESTION, RESPIRATION AND CIRCULATION</a><a href="#" class="list-group-item list-group-item-action ">REPRODUCTIVE BIOLOGY &amp; DEVELOPMENT</a><a href="#" class="list-group-item list-group-item-action ">HORMONES</a><a href="#" class="list-group-item list-group-item-action ">PRACTICALS</a></div>
+//                           <p></p>
+//                         </div>
+//                       </div>`);
+//   }
+// });
+
+
+
