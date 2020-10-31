@@ -5,9 +5,9 @@ const model_info = require('./../models/Model');
 exports.getTopicsAndMaterials = async (req,res,next) => {
     var chapter = req.params.chapter;
     var semester = req.params.semester;
-    console.log('received get req');
-    console.log(semester + ' is name ');
-    console.log(chapter + ' is chap ');
+    // console.log('received get req');
+    // console.log(semester + ' is name ');
+    // console.log(chapter + ' is chap ');
     try{
         const materials = await model_info.find({name : chapter, semester : semester});
         return res.status(200).json({
@@ -28,20 +28,20 @@ exports.pushFiles = async (req,res,next) => {
     var chapter = req.params.chapter;
     var semester = req.params.semester;
     var topic = req.body.topic;
-    var paper = req.body.paper || {
-
-    }
-    console.log(req.body);
-    console.log(topic);
-    console.log(chapter);
-    console.log(semester);
+    var paper = req.body.paper ;
+    // console.log(req.body);
+    // console.log(topic);
+    // console.log(chapter);
+    // console.log(semester);
     try{
         var result = await model_info.find({name : chapter, semester : semester, topic : topic});
-        // model_info.update(
-        //     { _id: item._id }, 
-        //     { $push: { name: value } },
-        //     done
-        // );
+        var obj = result[0];
+        // console.log(obj);
+        // console.log('paper is ' + paper);
+        await model_info.updateOne(
+            { _id: obj._id }, 
+            { $push: { urls: paper } },
+        );
         return res.status(200).json({
             success : true,
             data : result
