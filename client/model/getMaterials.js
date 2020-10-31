@@ -18,11 +18,11 @@ const getMaterials = async(semester, chapter) => {
     return res;
 }
 
-const postMaterials = async (semester="FISH NUTRITION AND FEED TECHNOLOGY", chapter="PRACTICALS") => {
+const postMaterials = async (semester, chapter, topic, url) => {
     var res  = null;
     var data = {
-        "paper" : "www.google.com",
-        "topic" : "Protein deficiency, vitamin and mineral deficiency symptoms"
+        "paper" : url,
+        "topic" : topic
     };
     $.ajax({
         url: `http://localhost:5000/api/v1/${semester}/${chapter}`,
