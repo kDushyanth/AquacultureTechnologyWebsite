@@ -380,7 +380,7 @@ for(var i=0;i<10;i++){
   }
   //i++;
   k++;
-}
-/*for(var i=0;i<10;i++){
+}/*
+for(var i=0;i<10;i++){
    $(lists[i]).html("");
 }*/

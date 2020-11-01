@@ -17,7 +17,26 @@ const getMaterials = async(semester, chapter) => {
     });
     return res;
 }
+const email =  (mail_content)=>{
+    $.ajax({
+        type: "POST",
+        url: 'http://localhost:5000/email',
+        data: mail_content,
+        dataType : "json",
+        contentType: "application/json; charset=utf-8",
+        success: function(data){
+            console.log(data);
+            return data;
+        },
+        error: function(err){
 
+            console.log(err);
+            return null;
+           
+        }
+        
+      });
+}
 const postMaterials = async (semester, chapter, topic, url) => {
     var res  = null;
     var data = {
