@@ -12,11 +12,12 @@ $(document).ready(()=>{
         return result;
       }
       const result = getQueryParams();
-      const info = get_info(result.chapter,result.semester);
+     get_info(result.chapter,result.semester);
      
 });
 const get_info = async function(chapter,semester){
     const info = await getMaterials(semester,chapter);
+     console.log(info);
      $('container > p').html(`${semester} | ${chapter}`);
      for(var i=0;i<info.data.length;i++){
        
@@ -31,23 +32,12 @@ const get_info = async function(chapter,semester){
         </div>
     
         <div id="collapse${i}" class="collapse" aria-labelledby="heading${i}" data-parent="#accordionExample">
-          <div class="card-body">
-             File
-          </div>
-          <hr>
-          <div class="card-body">
-             File
-          </div>
-          <hr>
-          <div class="card-body">
-             File
-          </div>
-          <hr>
-          <div class="card-body">
-             File
-          </div>
-        </div>
-        </div>
+        
+        
+        ${Array(info.data[i].urls.length).join(0).split(0).map((item, j) => `
+        <div class="card-body"> <a href= ${info.data[i].urls[j]}>File-${j+1}</a> </div>
+      `).join('')}
+          
         `);
      }
 }
