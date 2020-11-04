@@ -26,5 +26,6 @@ $(document).ready(function () {
 async function mailer(mail_content)  {
   const res = await email(mail_content);
   console.log(res);
+
 }
 

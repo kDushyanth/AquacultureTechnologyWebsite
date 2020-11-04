@@ -46,8 +46,8 @@ app.post('/email',(req,res)=>{;
     const mail_content ={
         from:req.body.email,
         to:"aqtwebsite@gmail.com",
-        subject:req.body.subject,
-        text:req.body.text
+        subject: req.body.subject,
+        text:'mail from ' + req.body.name +' . \n' + ' phone number of sender is ' + req.body.phone + '.\n Mail:\n'  + req.body.text
     };
     
     transporter.sendMail(mail_content).then(()=>{
