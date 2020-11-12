@@ -9,6 +9,9 @@ $(document).ready(function () {
             
         
         }
+        if($(event.target).is('.about')) {
+            $("html, body").animate({scrollTop : $(`#aboutus`).offset().top - 50}, 500)
+        }
     });
     $("#submit").click((event)=>{
         event.preventDefault();
