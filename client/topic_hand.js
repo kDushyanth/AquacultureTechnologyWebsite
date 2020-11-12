@@ -22,31 +22,31 @@ const get_info = async function(chapter,semester){
        
         $(".accordion").append(`
         <div class="card">
-        <div class="card-header" id="heading${i}">
-          <h2 class="mb-0">
-            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse${i}" aria-expanded="true" aria-controls="collapse${i}">
-              ${info.data[i].topic}
-            </button>
-          </h2>
-        </div>
-    
-        <div id="collapse${i}" class="collapse" aria-labelledby="heading${i}" data-parent="#accordionExample">
-          <div class="card-body">
-             File
+          <div class="card-header" id="heading${i}">
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse${i}" aria-expanded="true" aria-controls="collapse${i}">
+                ${info.data[i].topic}
+              </button>
+            </h2>
           </div>
-          <hr>
-          <div class="card-body">
-             File
+      
+          <div id="collapse${i}" class="collapse" aria-labelledby="heading${i}" data-parent="#accordionExample">
+            <div class="card-body">
+              File
+            </div>
+            <hr>
+            <div class="card-body">
+              File
+            </div>
+            <hr>
+            <div class="card-body">
+              File
+            </div>
+            <hr>
+            <div class="card-body">
+              File
+            </div>
           </div>
-          <hr>
-          <div class="card-body">
-             File
-          </div>
-          <hr>
-          <div class="card-body">
-             File
-          </div>
-        </div>
         </div>
         `);
      }
