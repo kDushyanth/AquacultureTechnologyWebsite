@@ -1,7 +1,7 @@
 const getMaterials = async(semester, chapter) => {
     var res  = null;
     await $.ajax({
-        url: `http://localhost:5000/api/v1/${semester}/${chapter}`,
+        url: `https://aquaculture-svrm.herokuapp.com/api/v1/${semester}/${chapter}`,
         method: "GET",
         success: function(response) {
             console.log("success ");
@@ -20,7 +20,7 @@ const getMaterials = async(semester, chapter) => {
 const email =  (mail_content)=>{
     $.ajax({
         type: "POST",
-        url: 'http://localhost:5000/email',
+        url: 'https://aquaculture-svrm.herokuapp.com/api/v1/email',
         data: mail_content,
         dataType : "json",
         contentType: "application/json; charset=utf-8",
@@ -44,7 +44,7 @@ const postMaterials = async (semester, chapter, topic, url) => {
         "topic" : topic
     };
     $.ajax({
-        url: `http://localhost:5000/api/v1/${semester}/${chapter}`,
+        url: `https://aquaculture-svrm.herokuapp.com/api/v1/${semester}/${chapter}`,
         method: 'PUT',
         data : JSON.stringify(data),
         contentType: 'application/json',
