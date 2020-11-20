@@ -40,4 +40,4 @@ const get_info = async function(chapter,semester){
           
         `);
      }
-}
+};
