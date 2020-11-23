@@ -19,15 +19,18 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static('client'));
 
-app.use('https://aquaculture-svrm.herokuapp.com/api/v1/' , require('./routes/MaterialsRoute'))
+app.use('/api/v1' , require('./routes/MaterialsRoute'))
 
-app.get('https://aquaculture-svrm.herokuapp.com/' , (req,res) => {
+app.get('/' , (req,res) => {
     res.sendFile('./client/index.html', { root: __dirname });
 });
-app.get('https://aquaculture-svrm.herokuapp.com/contact/',(req,res)=>{
+app.get('/contact',(req,res)=>{
     res.sendFile('./client/contact.html',{root:__dirname});
 });
-app.post('https://aquaculture-svrm.herokuapp.com/email/',(req,res)=>{;
+app.get('/materials',(req,res)=>{
+    res.sendFile('./client/materials.html',{root:__dirname});
+});
+app.post('/api/v1/email',(req,res)=>{;
     const authentication = {
         authentication: {
             key:"",

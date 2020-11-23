@@ -18,7 +18,7 @@ $(document).ready(()=>{
 const get_info = async function(chapter,semester){
     const info = await getMaterials(semester,chapter);
      console.log(info);
-     $('container > p').html(`${semester} | ${chapter}`);
+     $('.container > p').html(`${semester} | ${chapter}`);
      for(var i=0;i<info.data.length;i++){
        
         $(".accordion").append(`
